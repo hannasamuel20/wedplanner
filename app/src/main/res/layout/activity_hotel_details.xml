@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HotelDetails">
+    
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:contentScrim="?attr/colorPrimary"
+            app:title="  "
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+
+            >
+          <android.support.v7.widget.Toolbar
+              android:id="@+id/tooltoolbar"
+              android:layout_width="match_parent"
+              app:layout_collapseMode="pin"
+              app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+              android:layout_height="90dp"></android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+        
+        
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<ImageView-->
+
+            <!--android:id="@+id/imageView5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="270dp"-->
+
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Friendship Hotel"
+                android:textColor="#2C2C2C"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="230dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:background="#e2e2e2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_location" />
+
+            <TextView
+                android:id="@+id/hotel_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Menaheria Kazanchis, Addis Ababa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+
+            <TextView
+                android:id="@+id/hotel_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+
+                android:layout_marginTop="8dp"
+                android:text="950"
+                android:textColor="#7596FC"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="ETB per Dish"
+                android:textColor="#7596FC"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/hotel_price"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <ImageView
+                android:id="@+id/favourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/heart_outline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.692"
+                app:layout_constraintStart_toEndOf="@+id/hotel_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--android:text="Sheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.-->
+
+            <!--The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.-->
+
+            <!--The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.-->
+
+            <!--The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.-->
+
+            <!--The r"-->
+
+
+            <TextView
+                android:id="@+id/hotel_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="16dp"
+                android:lineSpacingExtra="5sp"
+            android:text="Sheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.
+
+            The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.
+
+            The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.
+
+            The rSheraton Addis, a Luxury Collection Hotel offers accommodation in Addis Ababa. Guests can enjoy the outdoor pool or relax at the spa and wellness centre. Free parking is available on site and there is free WiFi in the public areas.
+
+            The r"
+
+
+                android:textColor="@color/Darkgray"
+
+                app:fontFamily="@font/arsenal"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_price" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+
+
+                app:cardBackgroundColor="#EEEEEE"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+
+                app:layout_constraintEnd_toStartOf="@+id/cardView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_description">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+
+
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/account_group_outline" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="#EEEEEE"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_description">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+
+
+                    android:src="@drawable/cash_multiple" />
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+
+                android:layout_marginRight="8dp"
+                app:cardBackgroundColor="#EEEEEE"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardView5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_description">
+
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="54dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+
+
+                    android:src="@drawable/message_draw" />
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+
+                app:cardBackgroundColor="#EEEEEE"
+                app:cardCornerRadius="40dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cardView4"
+                app:layout_constraintTop_toBottomOf="@+id/hotel_description">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+
+                    android:src="@drawable/star_face" />
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/maxppl"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Max of 1000 people"
+                android:textAlignment="center"
+                android:textColor="#858585"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="@+id/cardView2"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+            <TextView
+                android:id="@+id/priceperdish"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="950 Per dish"
+                android:textAlignment="center"
+                android:textColor="#858585"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView3"
+                app:layout_constraintStart_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="7.9 Ratings"
+                android:textAlignment="center"
+                android:textColor="#858585"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView5"
+                app:layout_constraintStart_toStartOf="@+id/cardView5"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="200 Reviews"
+                android:textAlignment="center"
+                android:textColor="#858585"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView4"
+                app:layout_constraintStart_toStartOf="@+id/cardView4"
+                app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
